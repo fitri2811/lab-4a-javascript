@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="generateBtn" type="button">Generate</button>
+
+<ol id="numberList"></ol>
+
+<script>
+let button = document.getElementById("generateBtn");
+let list = document.getElementById("numberList");
+
+function generateNumbers() {
+    list.innerHTML = "";
+
+    for (let i = 1; i <= 5; i++) {
+        let item = document.createElement("li");
+
+        item.textContent = "The number is " + i;
+
+        list.appendChild(item);
+    }
+}
+
+button.addEventListener("click", generateNumbers);
+</script>
+
+</body>
+</html>
